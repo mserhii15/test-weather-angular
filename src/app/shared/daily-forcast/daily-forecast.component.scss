@@ -1,0 +1,52 @@
+:host {
+	display: block;
+}
+
+.subtitle {
+	flex-direction: column;
+	display: flex;
+}
+
+mat-card {
+	color: var(--white-color);
+}
+
+mat-card-header {
+	margin-bottom: 20px;
+}
+
+mat-card-title-group {
+	align-items: center;
+
+	//@include media('<=phone') {
+	//	flex-direction: column;
+	//	align-items: stretch;
+	//}
+}
+
+mat-card-title {
+	margin-bottom: 20px;
+}
+
+mat-card-content {
+	margin-bottom: 20px;
+}
+
+.buttons {
+	flex-direction: column;
+	max-width: 190px;
+	display: flex;
+	width: 100%;
+
+	//@include media('<=phone') {
+	//	max-width: 100%;
+	//}
+}
+
+button {
+	margin-bottom: 5px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

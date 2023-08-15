@@ -1,0 +1,23 @@
+<mat-card *ngFor="let daily of fiveDaysForecast$ | async">
+	<mat-card-header>
+		<mat-card-title>Date{{ daily.date | date }}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content class="content">
+		<ng-container *ngFor="let hour of daily.hourlyForecasts">
+			<div class="hour-forecast">
+				<p>Time: {{ hour.dt_txt | date: 'HH:mm:ss' }}</p>
+				<p>
+					Temperature high: {{ hour.main.temp_max | number: '1.1-1' }}
+					<sup>&#176;</sup>
+				</p>
+				<p>
+					Temperature low:
+					{{ hour.main.temp_min | number: '1.1-1' }}
+					<sup>&#176;</sup>
+				</p>
+				<p>Description: {{ hour.weather[0].description }}</p>
+			</div>
+		</ng-container>
+		<mat-divider></mat-divider>
+	</mat-card-content>
+</mat-card>

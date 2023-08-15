@@ -1,0 +1,207 @@
+{
+	"root": true,
+	"ignorePatterns": ["projects/**/*"],
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"parserOptions": {
+				"project": ["tsconfig.json", "e2e/tsconfig.json"],
+				"createDefaultProgram": true
+			},
+			"extends": [
+				"plugin:@angular-eslint/recommended",
+				"plugin:@angular-eslint/template/process-inline-templates"
+			],
+			"rules": {
+				"@angular-eslint/component-class-suffix": "error",
+				"@angular-eslint/contextual-lifecycle": "error",
+				"@angular-eslint/directive-class-suffix": "error",
+				"@angular-eslint/no-conflicting-lifecycle": "error",
+				"@angular-eslint/no-host-metadata-property": "error",
+				"@angular-eslint/no-input-rename": "error",
+				"@angular-eslint/no-inputs-metadata-property": "error",
+				"@angular-eslint/no-output-native": "error",
+				"@angular-eslint/no-output-on-prefix": "off",
+				"@angular-eslint/no-output-rename": "error",
+				"@angular-eslint/no-outputs-metadata-property": "error",
+				"@angular-eslint/use-lifecycle-interface": "error",
+				"@angular-eslint/use-pipe-transform-interface": "error",
+				"@angular-eslint/component-selector": [
+					"error",
+					{
+						"prefix": "fx",
+						"style": "kebab-case",
+						"type": "element"
+					}
+				],
+				"@angular-eslint/directive-selector": [
+					"error",
+					{
+						"prefix": "fx",
+						"style": "camelCase",
+						"type": "attribute"
+					}
+				],
+				"@typescript-eslint/array-type": [
+					"error",
+					{
+						"default": "array"
+					}
+				],
+				"@typescript-eslint/explicit-function-return-type": [
+					"error",
+					{
+						"allowExpressions": false,
+						"allowTypedFunctionExpressions": true,
+						"allowHigherOrderFunctions": false,
+						"allowDirectConstAssertionInArrowFunctions": true,
+						"allowConciseArrowFunctionExpressionsStartingWithVoid": true
+					}
+				],
+				"@typescript-eslint/explicit-module-boundary-types": [
+					"error",
+					{
+						"allowArgumentsExplicitlyTypedAsAny": true,
+						"allowDirectConstAssertionInArrowFunctions": true,
+						"allowHigherOrderFunctions": false,
+						"allowTypedFunctionExpressions": false
+					}
+				],
+				"@typescript-eslint/indent": [
+					"error",
+					"tab",
+					{
+						"FunctionDeclaration": {
+							"parameters": "first"
+						},
+						"FunctionExpression": {
+							"parameters": "first"
+						}
+					}
+				],
+				"@typescript-eslint/member-delimiter-style": [
+					"error",
+					{
+						"multiline": {
+							"delimiter": "semi",
+							"requireLast": true
+						},
+						"singleline": {
+							"delimiter": "semi",
+							"requireLast": false
+						}
+					}
+				],
+				"@typescript-eslint/member-ordering": "off",
+				"@typescript-eslint/naming-convention": "off",
+				"@typescript-eslint/no-dynamic-delete": "error",
+				"@typescript-eslint/no-empty-function": ["error", { "allow": ["constructors"] }],
+				"@typescript-eslint/no-inferrable-types": "off",
+				"@typescript-eslint/no-non-null-assertion": "error",
+				"@typescript-eslint/no-shadow": [
+					"error",
+					{
+						"hoist": "all"
+					}
+				],
+				"@typescript-eslint/no-unused-expressions": "error",
+				"@typescript-eslint/no-var-requires": "off",
+				"@typescript-eslint/quotes": ["error", "single"],
+				"@typescript-eslint/semi": ["error", "always"],
+				"@typescript-eslint/type-annotation-spacing": "error",
+				"@typescript-eslint/typedef": [
+					"error",
+					{
+						"parameter": true
+					}
+				],
+				"arrow-body-style": "error",
+				"curly": ["error", "multi-line"],
+				"eol-last": "error",
+				"id-denylist": "error",
+				"id-match": "error",
+				"import/order": "off",
+				"indent": [
+					"error",
+					"tab",
+					{
+						"FunctionDeclaration": {
+							"parameters": "first"
+						},
+						"FunctionExpression": {
+							"parameters": "first"
+						}
+					}
+				],
+				"max-classes-per-file": "off",
+				"max-len": [
+					"error",
+					{
+						"code": 140
+					}
+				],
+				"no-cond-assign": "error",
+				"no-console": [
+					"error",
+					{
+						"allow": [
+							"warn",
+							"dir",
+							"time",
+							"timeEnd",
+							"timeLog",
+							"trace",
+							"assert",
+							"clear",
+							"count",
+							"countReset",
+							"group",
+							"groupEnd",
+							"table",
+							"debug",
+							"info",
+							"dirxml",
+							"error",
+							"groupCollapsed",
+							"Console",
+							"profile",
+							"profileEnd",
+							"timeStamp",
+							"context"
+						]
+					}
+				],
+				"no-debugger": "error",
+				"no-empty": "error",
+				"no-empty-function": ["error", { "allow": ["constructors"] }],
+				"no-fallthrough": "error",
+				"no-magic-numbers": "off",
+				"no-redeclare": "error",
+				"no-restricted-imports": ["error", "rxjs/Rx"],
+				"no-shadow": "off",
+				"no-underscore-dangle": "error",
+				"no-unused-expressions": "error",
+				"quote-props": ["error", "as-needed"],
+				"quotes": ["error", "single"],
+				"semi": "error",
+				"space-before-function-paren": [
+					"error",
+					{
+						"anonymous": "never",
+						"asyncArrow": "always",
+						"named": "never"
+					}
+				]
+			}
+		},
+		{
+			"files": ["*.html"],
+			"extends": ["plugin:@angular-eslint/template/recommended"],
+			"rules": {
+				"@angular-eslint/template/banana-in-box": "error",
+				"@angular-eslint/template/eqeqeq": "error",
+				"@angular-eslint/template/no-negated-async": "error"
+			}
+		}
+	]
+}

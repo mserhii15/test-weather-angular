@@ -1,0 +1,14 @@
+:root {
+	--app-width: 100vw;
+	--app-height: 100vh;
+	@supports (-webkit-touch-callout: none) {
+		--app-height: 100 svh;
+	}
+
+	--gray-color: #6e6d6d;
+	--black-color: #303030;
+	--white-color: #fff;
+	--purple-color: #9c27b0;
+	--accent-color: #f9a825;
+	--warn-color: #d50000;
+}

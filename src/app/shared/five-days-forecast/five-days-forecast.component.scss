@@ -1,0 +1,31 @@
+:host {
+	grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	grid-gap: 5px;
+	padding: 5px;
+
+	//@include media('<=tablet') {
+	//	grid-template-columns: repeat(2, 1fr);
+	//}
+
+	//@include media('<=phone') {
+	//	grid-template-columns: repeat(1, 1fr);
+	//}
+}
+.hour-forecast {
+	flex-direction: column;
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.content {
+	background-color: var(--gray-color);
+	border-radius: 10px;
+	overflow-y: scroll;
+	height: 105px;
+	padding: 5px;
+}
+
+mat-divider {
+	padding-bottom: 10px;
+}

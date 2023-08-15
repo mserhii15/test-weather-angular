@@ -1,0 +1,33 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title-group>
+			<mat-card-title>{{ cityWeather.name }} </mat-card-title>
+			<mat-card-subtitle class="subtitle">
+				<span> Relative humidity: {{ cityWeather.main.humidity }}% </span>
+				<span> Temperature {{ cityWeather.main.temp | number: '1.1-1' }} </span>
+			</mat-card-subtitle>
+			<div class="buttons">
+				<button (click)="toggleFavorite(cityWeather.id)" mat-raised-button color="primary">
+					<span>{{
+						favoriteService.favouritesCityIdsMap[cityWeather.id]
+							? 'Delete from favorite'
+							: 'Add to Favorite'
+					}}</span>
+				</button>
+				<button (click)="showForeCast = !showForeCast" mat-raised-button color="primary">
+					<span>Forecast</span>
+				</button>
+			</div>
+		</mat-card-title-group>
+	</mat-card-header>
+	<mat-divider></mat-divider>
+	<mat-card-content>
+		<div class="container">Weather conditions: {{ cityWeather.weather[0].description }}</div>
+		<div class="container">
+			<ng-container *ngIf="showForeCast">
+				<app-five-days-forecast [cityWeather]="cityWeather"></app-five-days-forecast>
+			</ng-container>
+		</div>
+	</mat-card-content>
+	<mat-divider></mat-divider>
+</mat-card>

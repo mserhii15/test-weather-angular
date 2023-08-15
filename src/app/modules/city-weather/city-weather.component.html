@@ -1,0 +1,5 @@
+<app-search-city (selectedCity)="weatherCity($event)"></app-search-city>
+<ng-container *ngIf="selectedWeather">
+	<mat-divider></mat-divider>
+	<app-daily-forecast [cityWeather]="selectedWeather"></app-daily-forecast>
+</ng-container>
