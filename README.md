@@ -9,10 +9,6 @@ Make sure you have the following installed:
 - Angular CLI (v16.0.0 or above)
 - JSON Server (Install using `npm install -g json-server`)
 
-## Installation
-
-First, clone the repository:
-
 ## Starting the Frontend
 You can start the Angular development server by running:
 
